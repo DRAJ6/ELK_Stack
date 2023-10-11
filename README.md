@@ -1,5 +1,5 @@
 # Setting Up ELK Stack for Logging and Training a LR Model
-In this lab, we will walk through the process of setting up the ELK (Elasticsearch, Logstash, Kibana) stack for log management and visualization while training a Linear Regression (LR) model.
+Setting up the ELK (Elasticsearch, Logstash, Kibana) stack for log management and visualization while training a Linear Regression (LR) model.
 
 ## Prerequisites
 Make sure you have the following prerequisites in place:
