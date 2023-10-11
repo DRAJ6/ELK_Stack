@@ -1,0 +1,9 @@
+2023-10-09 13:25:54,821 - INFO - Starting model training...
+2023-10-09 13:25:54,821 - INFO - Number of training samples: 120
+2023-10-09 13:25:54,821 - INFO - Number of testing samples: 30
+2023-10-09 13:25:54,848 - INFO - Model training completed.
+2023-10-09 13:25:54,849 - INFO - Model accuracy on test data: 1.00
+2023-10-09 13:25:54,850 - INFO - Model coefficients: [[-0.3972204   0.96077513 -2.37394379 -1.00318789]
+ [ 0.51277034 -0.25325633 -0.21541288 -0.76913138]
+ [-0.11554994 -0.7075188   2.58935666  1.77231927]]
+2023-10-09 13:25:54,850 - INFO - Model intercept: [  9.03232286   1.8416178  -10.87394066]
