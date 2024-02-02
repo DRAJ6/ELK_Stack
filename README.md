@@ -22,6 +22,8 @@ Verify that JAVA_HOME is correctly set by running:
 echo $JAVA_HOME
 ```
 
+# MacOS
+
 ## Elasticsearch
 Elasticsearch is a distributed, RESTful search, and analytics engine.
 
@@ -245,6 +247,88 @@ http://localhost:5601
 - Navigate to the logstash directory by using the `cd` command:
 ```commandline
 cd /path/to/logstash
+```
+- Once you are inside the Logstash directory, start Logstash by running the following command:
+```commandline
+bin/logstash -f /path/to/logstash.conf
+```
+Now, you can access and visualize the logs in Kibana under the `Discover` section.
+
+# WSL
+# Windows
+- Visit Oracle's JDK DownloadsLinks to an external site. page.
+  Download the JDK version suitable for your Windows system (e.g., x64 Compressed Archive).
+  
+
+- Copy the downloaded .tar.gz file from Windows to a Linux folder in WSL.
+
+- Extract JDK:
+```text
+tar -xzvf jdk-21_linux-x64_bin.tar.gz
+```
+
+- Move JDK to a Standard Location:
+```text
+sudo mv jdk-21 /usr/local/
+```
+
+- Configure Environment Variables:
+
+- Edit your .bashrc file:
+- 1. nano ~/.bashrc
+- 2. Add these lines at the end:
+- 3. export JAVA_HOME=/usr/local/jdk-21 (might be different version)
+- 4. export PATH=$JAVA_HOME/bin:$PATH
+
+- Apply Changes and Verify Installation:
+```text
+source ~/.bashrc java -version
+```
+
+- Install Elasticsearch and Kibana:
+  - Follow the installation instructions provided in the Elasticsearch and Kibana GitHub repositories or official documentation.
+
+- Configure Kibana:
+
+    - Start Kibana configuration (typically through a web interface).
+    - When prompted for an enrollment token, generate one.
+
+- Generate Kibana Enrollment Token:
+
+    - In a new terminal, navigate to the Elasticsearch bin directory:
+```text
+cd path/to/elasticsearch/bin
+```
+
+- Run the command:
+```text
+./elasticsearch-create-enrollment-token --scope kibana
+```
+- Copy the generated token.
+- Enter Enrollment Token in Kibana:
+
+    - Paste the enrollment token into the Kibana configuration interface in your browser.
+
+- Reset Elasticsearch Password:
+
+    - In a new terminal, navigate to the Elasticsearch bin directory.
+    - Run the password reset command:
+```text
+./elasticsearch-reset-password -u elastic
+```
+- Note down the newly generated password.
+
+- Start Elasticsearch:
+
+```text
+./elasticsearch
+```
+
+- Observe the output for the Elasticsearch IP address (it may not be localhost, but something like https://172.26.225.173:9200/).
+  - Access Elasticsearch:
+    - Enter the Elasticsearch IP address in your browser.
+    - Log in using the username elastic and password you noted earlier.
+    - You should see a JSON response from Elasticsearch.
 ```
 - Once you are inside the Logstash directory, start Logstash by running the following command:
 ```commandline
