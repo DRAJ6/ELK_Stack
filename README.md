@@ -53,6 +53,10 @@ http://localhost:9200
 ```
 - If Elasticsearch is functioning correctly, you should see JSON content displayed in your web browser.
 
+- Add these two lines in the elasticsearch.yml file:
+  - xpack.security.enabled: false
+  - xpack.security.enrollment.enabled: false
+
 ## Kibana
 
 Kibana is a powerful data visualization and exploration tool for Elasticsearch.
